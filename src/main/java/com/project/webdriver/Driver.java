@@ -1,6 +1,7 @@
 package com.project.webdriver;
 
 import org.omg.CORBA.SystemException;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -21,11 +22,16 @@ public class Driver {
         if (driver == null) {
             DesiredCapabilities browser = new DesiredCapabilities();
             browser.setBrowserName("chrome");
-            browser.setVersion("58.0");
+            browser.setVersion("65.0");
             browser.setCapability("enableVNC", true);
+            browser.setCapability("enableVideo",true);
+            browser.setCapability("screenResolution" ,"1920x1080x24");
 
             try {
+
                 driver = new RemoteWebDriver(URI.create("http://localhost:4444/wd/hub").toURL(), browser);
+                driver.manage().window().setSize(new Dimension(1920, 1080));
+
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
