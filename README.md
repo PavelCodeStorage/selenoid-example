@@ -15,7 +15,7 @@ Repository provide configuration example of Selenium with Selenoid
 6. From command line execude command: **docker ps -a**  (see created containers) 
 7. Navigate to the localhost:8080 (see: ![selenoidui](https://user-images.githubusercontent.com/26840848/39272875-e926f05a-48e5-11e8-806f-9847aaa59e52.jpg)
 7. Don't forget to add some changes in your code see :
-
+```java
         if (driver == null) {
             DesiredCapabilities browser = new DesiredCapabilities();
             browser.setBrowserName("chrome");
@@ -29,7 +29,7 @@ Repository provide configuration example of Selenium with Selenoid
             }
         }
         return driver;
-        
+```
 7. Run out tests : **mvn clean test**
 8. See how tests pass (see: ![selenoidvnc](https://user-images.githubusercontent.com/26840848/39272905-fedb162e-48e5-11e8-9284-bdbb73b106dc.jpg))
 8. Even with docker you can make screenshoots and added it in reporting (i.e add image see: 
