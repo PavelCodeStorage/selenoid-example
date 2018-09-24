@@ -19,7 +19,7 @@ Repository provide configuration example of Selenium with Selenoid
         if (driver == null) {
             DesiredCapabilities browser = new DesiredCapabilities();
             browser.setBrowserName("chrome");
-            browser.setVersion("58.0");
+            browser.setVersion("65.0");
             browser.setCapability("enableVNC", true);
 
             try {
