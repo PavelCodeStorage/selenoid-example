@@ -7,7 +7,7 @@ Repository provide configuration example of Selenium with Selenoid
 
 ---
 **What you need to do:**
-1. Install docker (https://docs.docker.com/release-notes/docker-ce/#17031-ce-2017-03-27)
+1. Install docker (https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17031-ce-win12--2017-05-12)
 3. Navigate to the folder with **docker-compose.yml** file and execute from command line command: **docker-compose up**
 4. Wait until all necessary images are downloaded  :)
 4. Download vnc image: **docker pull selenoid/vnc:chrome_65.0**
