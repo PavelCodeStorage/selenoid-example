@@ -10,7 +10,7 @@ Repository provide configuration example of Selenium with Selenoid
 1. Install docker (https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17031-ce-win12--2017-05-12)
 3. Navigate to the folder with **docker-compose.yml** file and execute from command line command: **docker-compose up**
 4. Wait until all necessary images are downloaded  :)
-4. Download vnc image: **docker pull selenoid/vnc:chrome_65.0**
+4. Download vnc image: **docker pull selenoid/vnc:chrome_65.0**.
 5. Download image for video recording **docker pull selenoid/video-recorder**
 6. From command line execude command: **docker ps -a**  (see created containers) 
 7. Navigate to the localhost:8080 (see: ![selenoidui](https://user-images.githubusercontent.com/26840848/39272875-e926f05a-48e5-11e8-806f-9847aaa59e52.jpg)
