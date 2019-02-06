@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1549397702884" stop="1549397726264" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Language feature</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1549397702907" stop="1549397726262" status="broken">
+            <name>Successful Login under specific language</name>
+            <title>Successful Login under specific language</title>
+            <description type="text"></description>
+            <failure>
+                <message>TimeoutException: Timed out after 15 seconds waiting for visibility of all elements located by By.xpath: //input[@id='email']
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-2JBPT44', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.38.551591 (bcc4a2cdef0f6b942b2bb8049068f65340fa2a69), userDataDir=/tmp/.org.chromium.Chromium.nNjcmc}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 90582ff6715c29e250b489d2b553e495</message>
+                <stack-trace>org.openqa.selenium.TimeoutException: Timed out after 15 seconds waiting for visibility of all elements located by By.xpath: //input[@id='email']
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-2JBPT44', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.38.551591 (bcc4a2cdef0f6b942b2bb8049068f65340fa2a69), userDataDir=/tmp/.org.chromium.Chromium.nNjcmc}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 90582ff6715c29e250b489d2b553e495
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.project.pages.BasePage.find(BasePage.java:36)
+	at com.project.pages.BasePage.setElementText(BasePage.java:31)
+	at com.project.pages.SearchPage.search(SearchPage.java:21)
+	at com.project.LanguageStepdefs.userEntersValueInTheSearchField(LanguageStepdefs.java:36)
+	at ✽.When User enters value "selenoid" in the search field(selectLanguage.feature:5)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1549397709036" stop="1549397710376" status="passed">
+                    <name>Given User on main search page</name>
+                    <title>Given User on main search page</title>
+                </step>
+                <step start="1549397710378" stop="1549397726258" status="broken">
+                    <name>When User enters value "selenoid" in the search field</name>
+                    <title>When User enters value "selenoid" in the search field</title>
+                    <attachments>
+                        <attachment title="{0}" source="5c4645ab-e81b-463a-a602-0b15bd2d8577-attachment.png" type="image/png"/>
+                    </attachments>
+                </step>
+                <step start="1549397726258" stop="1549397726260" status="canceled">
+                    <name>Then List of results is appeared</name>
+                    <title>Then List of results is appeared</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Successful Login under specific language"/>
+                <label name="feature" value="Language feature"/>
+                <label name="host" value="DESKTOP-2JBPT44"/>
+                <label name="thread" value="5884@DESKTOP-2JBPT44.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="Language feature"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

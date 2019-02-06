@@ -24,8 +24,8 @@ public class Driver {
             browser.setBrowserName("chrome");
             browser.setVersion("65.0");
             browser.setCapability("enableVNC", true);
-            browser.setCapability("enableVideo",true);
-            browser.setCapability("screenResolution" ,"1920x1080x24");
+            browser.setCapability("enableVideo", true);
+            browser.setCapability("screenResolution", "1920x1080x24");
 
             try {
 

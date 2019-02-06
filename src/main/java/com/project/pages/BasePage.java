@@ -2,6 +2,7 @@ package com.project.pages;
 
 import com.project.webdriver.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,32 +19,31 @@ public class BasePage {
     public WebDriverWait wait;
 
     public BasePage(WebDriver driver) throws MalformedURLException {
-        this.driver= driver;
-        wait=new WebDriverWait(driver,10);
+        this.driver = driver;
+        wait = new WebDriverWait(driver, 10);
     }
 
-public void clickOnElement(By element){
-    find(element).click();
-}
+    public void clickOnElement(By element) {
+        find(element).click();
+    }
+
+    public void clickReturn(By element) {
+        find(element).sendKeys(Keys.RETURN);
+    }
 
 
-public void setElementText(By element,String text){
-  find(element).sendKeys(text);
-}
+    public void setElementText(By element, String text) {
+        find(element).sendKeys(text);
+    }
 
-public String getElementText(By element){
-   return find(element).getText();
-}
+    public WebElement find(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, 15);
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+        return driver.findElement(locator);
+    }
 
-public WebElement find(By locator){
-    WebDriverWait wait =new WebDriverWait(driver,15);
-    wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
-    return driver.findElement(locator);
-}
-
-public void openUrl(String url){
-    driver.get(url);
-}
-
+    public void openUrl(String url) {
+        driver.get(url);
+    }
 
 }
