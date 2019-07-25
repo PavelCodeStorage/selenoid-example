@@ -36,25 +36,3 @@ Repository provide configuration example of Selenium with Selenoid
 ![dockerimagesallureresults](https://user-images.githubusercontent.com/26840848/39099117-67de4f9e-467d-11e8-9f75-04155c2e0b58.jpg)
 
 
-version: '3'
-services:
-  selenoid:
-    image: "aerokube/selenoid"
-    network_mode: bridge
-    ports:
-      - "4444:4444"
-    volumes:
-      - ./config:/etc/selenoid:ro
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./config:/selenoid/video
-    environment:
-      - OVERRIDE_VIDEO_OUTPUT_DIR=./target
-  selenoid-ui:
-    image: "aerokube/selenoid-ui"
-    network_mode: bridge
-    links:
-      - selenoid
-    ports:
-      - "8080:8080"
-    command: ["--selenoid-uri", "http://selenoid:4444"]
-
