@@ -10,12 +10,18 @@ int length = 10;
     boolean useLetters = true;
     boolean useNumbers = false;
 
-    String generatedString = RandomStringUtils.random(length, useLetters, useNumbers);
+ArrayList myList = new ArrayList();
+myList.add("knownValue1");
+myList.add("knownValue2");
+myList.add("knownValue3");
+myList.add("knownValue4");
+myList.add("knownValue1");
 
-vars.put("randomValue", generatedString); 
+   Random ran = new Random();
+   int nxt = ran.nextInt(myList.size());
 
-print(value);
-print(headerValue);
+vars.put("randomValue",myList.get(nxt)); 
+
 
 ---
 **What you need to do:**
