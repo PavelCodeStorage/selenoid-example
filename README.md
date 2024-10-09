@@ -2,25 +2,6 @@ Selenium with Selenoid
 ---
 Overview:
 ---
- 
-Repository provide configuration example of Selenium with Selenoid
-import org.apache.commons.lang3.RandomStringUtils;
-
-int length = 10;
-    boolean useLetters = true;
-    boolean useNumbers = false;
-
-ArrayList myList = new ArrayList();
-myList.add("knownValue1");
-myList.add("knownValue2");
-myList.add("knownValue3");
-myList.add("knownValue4");
-myList.add("knownValue1");
-
-   Random ran = new Random();
-   int nxt = ran.nextInt(myList.size());
-
-vars.put("randomValue",myList.get(nxt)); 
 
 
 ---
